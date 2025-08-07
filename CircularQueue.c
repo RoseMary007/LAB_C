@@ -56,7 +56,8 @@ int item;
 if(rear==-1&& front==-1){
 printf("underflow\n");}
 else if(front==rear){
-printf("unferflow\n");
+item=QueueArr[front];
+printf("%d",item);
 rear=front=-1;
 }
 else{
@@ -74,3 +75,4 @@ printf("%d ",QueueArr[i]);
 printf("\n");
 front=(front+1)%max_limit;
 }}
+
