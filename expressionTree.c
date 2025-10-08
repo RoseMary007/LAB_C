@@ -57,7 +57,8 @@ void infixToPostfix(char infix[], char postfix[]) {
             pop(); 
         }
         else if (isOperator(ch)) {
-            while (isOperator(peek()) && ((precedence(ch) < precedence(peek())) || (precedence(ch) == precedence(peek()) && !isRightAssociative(ch)))) {
+            while (isOperator(peek()) && ((precedence(ch) < precedence(peek())) 
+                || (precedence(ch) == precedence(peek()) && !isRightAssociative(ch)))) {
                 postfix[k++] = pop();
             }
             push(ch);
